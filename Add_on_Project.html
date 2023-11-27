@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cooking-My Hobby</title>
+    <style>
+        body {
+            background: linear-gradient(104.9deg, rgb(255, 95, 162) 2.3%, rgb(254, 201, 154) 92.7%);
+        }
+
+        #theme_btn {
+            margin-bottom: 20px;
+            background-color: black;
+            color: white;
+            font-size: 12px;
+        }
+
+        #theme:hover {
+            background-color: white;
+            color: black;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .container {
+            display: block;
+            margin: 0 auto;
+            max-width: 650px;
+            background-color: white;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            margin-top: 10px;
+            grid-gap: 15px;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        .grid-img {
+            height: 100px;
+            width: 150px;
+            border-radius: 10px;
+            transition: transform 100ms ease-in, filter 200ms ease-out;
+            /* object-fit: cover; */
+            /* aspect-ratio: 1/16; */
+        }
+
+        .grid-img:hover {
+            transform: scale(2);
+            filter: brightness(120%);
+        }
+
+        .First_Image {
+            border-radius: 10px;
+            transition: transform 150ms ease-in, filter 200ms ease-in;
+        }
+
+        .First_Image:hover {
+            border-radius: 10px;
+            /* opacity: 0.5; */
+            filter: contrast(120%);
+            transform: scale(1.1) rotate(180deg);
+        }
+
+        button {
+            display: block;
+            margin: 0 auto;
+            border: 1px solid plum;
+            font-size: 20px;
+            border-radius: 6px;
+            padding: 10px;
+            transition: all 150ms ease-in;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: plum;
+            color: white;
+        }
+
+        p {
+            text-align: justify;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+        .dark {
+            background: black;
+            color: white;
+        }
+
+        .dark .container {
+            background-color: rgb(68, 68, 68);
+        }
+
+        .dark a {
+            color: plum;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="theme_btn">Dark Theme</button>
+    <div class="container">
+        <h1>Cooking</h1>
+        <h2>My favorite hobby</h2>
+
+        <a href="https://en.wikipedia.org/wiki/Indian_cuisine" target="_blank"><img class="First_Image"
+                src="https://i0.wp.com/post.healthline.com/wp-content/uploads/2020/07/thali-indian-1296x728-header.jpg?w=1155&h=1528" />
+        </a>
+        <div class="grid">
+            <a href="https://en.wikipedia.org/wiki/Indian_cuisine" target="_blank"><img class="grid-img"
+                    src="https://www.funfoodfrolic.com/wp-content/uploads/2019/08/13.jpg" />
+            </a>
+            <a href="https://en.wikipedia.org/wiki/Indian_cuisine" target="_blank"><img class="grid-img"
+                    src="https://www.chefkunalkapur.com/wp-content/uploads/2022/05/OZZ_4809-1300x730.jpg?v=1651548475" />
+            </a>
+            <a href="https://en.wikipedia.org/wiki/Indian_cuisine" target="_blank"><img class="grid-img"
+                    src="https://lh5.ggpht.com/-f52ljDn1Xgk/UwwX1rvecHI/AAAAAAAAY-s/XbtDQHkVAhw/s72-c/Gujarati-thali-recipes_thumb1.jpg?imgmax=800" />
+            </a>
+            <a href="https://en.wikipedia.org/wiki/Indian_cuisine" target="_blank"><img class="grid-img"
+                    src="https://pbs.twimg.com/media/EdmjvNgUEAAk3Mp?format=jpg&name=900x900" />
+            </a>
+        </div>
+
+        <p>My opinion is that cooking is the best hobby to have, because it can be very useful in life. Cooking is my
+            hobby and has been for several years. I was about five years old, when I started learning how to cook.
+            Cooking is something that I inherited from my mother, my mother cooks delicious food, and from her I learned
+            how
+            to cook.
+            <a href="https://en.wikipedia.org/wiki/Indian_cuisine" target="_blank">📖 Read more...</a>
+        </p>
+        <button>Learn Indian Cooking</button>
+    </div>
+    <footer>
+        Coedd by Vijeta Singh with ❤️
+    </footer>
+    <script>
+        function changeTheme() {
+            let body = document.querySelector("body");
+            body.classList.toggle("dark");
+        }
+        let btn = document.querySelector("#theme_btn");
+        btn.addEventListener('click', changeTheme)
+    </script>
+</body>
+
+</html>
